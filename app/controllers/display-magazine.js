@@ -21,6 +21,7 @@ export default Ember.Controller.extend({
 
     		if (currentPage < model.get('magPages')) {
     			this.set('page', currentPage + 1)
+    			model.set('currentPage', currentPage + 1)
     		}
     	},
 
@@ -30,6 +31,7 @@ export default Ember.Controller.extend({
 
 			if (currentPage > 1) {
 				this.set('page', currentPage - 1)
+    			model.set('currentPage', currentPage - 1)
 			}
     	}
     }

@@ -2,7 +2,7 @@
 
 {{#each magazine in magazines}}
     <div class="mag-link">
-		Magazine: {{#link-to "display-magazine" (query-params magName=magazine.magName page=1)}}{{magazine.magName}}{{/link-to}}
+		Magazine: {{#link-to "display-magazine" (query-params magName=magazine.magName)}}{{magazine.magName}}{{/link-to}}
     </div>
 {{/each}}
 

@@ -4,5 +4,6 @@ export default DS.Model.extend({
 	magName:		DS.attr('string'),
 	magLocation:	DS.attr('string'),
 	magPages:		DS.attr('number'),
-	magPagePrefix:	DS.attr('string')
+	magPagePrefix:	DS.attr('string'),
+	currentPage:	DS.attr('number')
 });
