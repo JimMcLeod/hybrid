@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
     	}
     	var model = this.get('model');
     	var pageNo = (this.page < 10) ? ("0" + this.page) : this.page;
-    	return "http://localhost/mags/" + model.get('magLocation') + "/" + model.get('magPagePrefix') + pageNo + ".png";
+    	return "http://jimdev.x10.mx/" + model.get('magLocation') + "/" + model.get('magPagePrefix') + pageNo + ".png";
     }.property('page'),
 
     actions: {
