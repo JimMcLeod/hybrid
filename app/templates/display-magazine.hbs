@@ -1,4 +1,7 @@
-<img src="{{pageImageUrl}}" class="page-image"/>
+{{#unless imageLoadComplete}}
+	<img class="ajax-spinner" src="assets/img/ajax-loader.gif"/>
+{{/unless}}
+<img id="pageImage" src="{{pageImageUrl}}" class="page-image"/>
 <a href="#" class="prev-arrow" {{action "prevPage"}}><img src="assets/img/prev-arrow.png"/></a>
 {{#link-to "index"}}<img src="assets/img/home-icon.png" class="home-icon"/>{{/link-to}}
 <a href="#" class="next-arrow" {{action "nextPage"}}><img src="assets/img/next-arrow.png"/></a>

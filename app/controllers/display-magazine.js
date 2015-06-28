@@ -5,13 +5,15 @@ export default Ember.Controller.extend({
     magName: null,
     page: null,
 
+	imageLoadComplete: false,
+
     pageImageUrl: function() {
     	if (this.page<1) {
     		this.set('page', 1);
     	}
     	var model = this.get('model');
     	var pageNo = (this.page < 10) ? ("0" + this.page) : this.page;
-    	return "/assets/img/" + model.get('magLocation') + "/" + model.get('magPagePrefix') + pageNo + ".png";
+    	return "http://localhost/mags/" + model.get('magLocation') + "/" + model.get('magPagePrefix') + pageNo + ".png";
     }.property('page'),
 
     actions: {
@@ -21,7 +23,8 @@ export default Ember.Controller.extend({
 
     		if (currentPage < model.get('magPages')) {
     			this.set('page', currentPage + 1)
-    			model.set('currentPage', currentPage + 1)
+    			model.set('currentPage', currentPage + 1);
+    			this.set('imageLoadComplete', false);
     		}
     	},
 
@@ -32,6 +35,7 @@ export default Ember.Controller.extend({
 			if (currentPage > 1) {
 				this.set('page', currentPage - 1)
     			model.set('currentPage', currentPage - 1)
+    			this.set('imageLoadComplete', false);
 			}
     	}
     }

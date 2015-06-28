@@ -45,3 +45,11 @@ body {
 	text-align: center;
 	background-color: #ffffff;
 }
+
+.ajax-spinner {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -16px;
+	margin-left: -16px;
+}
