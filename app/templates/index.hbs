@@ -1,8 +1,8 @@
 <h1 class="center-text">MegaZine</h1>
 
 {{#each magazine in magazines}}
-    <p class="mag-link">
-		{{#link-to "display-magazine" (query-params magName=magazine.magName)}}Name:{{magazine.magName}}{{/link-to}}
-    </p>
+    <div class="mag-link">
+		Magazine: {{#link-to "display-magazine" (query-params magName=magazine.magName page=1)}}{{magazine.magName}}{{/link-to}}
+    </div>
 {{/each}}
 
