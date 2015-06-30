@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
     		var model = this.get('model');
 
     		if (currentPage < model.get('magPages')) {
-    			this.set('page', currentPage + 1)
+    			this.set('page', currentPage + 1);
     			model.set('currentPage', currentPage + 1);
     			this.set('imageLoadComplete', false);
     		}
@@ -33,8 +33,8 @@ export default Ember.Controller.extend({
 			var model = this.get('model');
 
 			if (currentPage > 1) {
-				this.set('page', currentPage - 1)
-    			model.set('currentPage', currentPage - 1)
+				this.set('page', currentPage - 1);
+    			model.set('currentPage', currentPage - 1);
     			this.set('imageLoadComplete', false);
 			}
     	}
